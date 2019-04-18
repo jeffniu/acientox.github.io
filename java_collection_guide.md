@@ -1,4 +1,4 @@
-##A brief guide to Java classes
+## A brief guide to Java classes
 
 #### Array
  - length
@@ -127,7 +127,7 @@ boolean addAll(Collection<? extends E> c)
 void clear()
 
 ```
-####[Stack](https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html)
+#### [Stack](https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html)
 ```
 boolean empty()
 
@@ -139,7 +139,7 @@ E push(E item)
 
 int search(Object o) // return 1 based position. never used before
 ```
-####[Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html) - interface
+#### [Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html) - interface
 ```
 /**
 return true if success, throws IllegalStateException if no space is available
@@ -155,7 +155,7 @@ E poll() // return null if empty
 E peek() // return null if empty
 ```
 
-####[Deque](https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html) - interface
+#### [Deque](https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html) - interface
 - Superinterfaces: Iterable<E>, Queue<E>, Collection<E>
 
 ```
@@ -199,10 +199,10 @@ E push(E e) // addFirst(E e)
 
 
 ```
-####[LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)
+#### [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)
 implements: Iterable<E>, Collection<E>, Deque<E>, List<E>, Queue<E>
 
-####[PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html)
+#### [PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html)
 implements: Iterable<E>, Collection<E>, Queue<E>
 
 ```
@@ -219,7 +219,7 @@ PriorityQueue(int initialCapacity, Comparator<? super E> comparator) //ofen used
 PriorityQueue(SortedSet<? extends E> c)
 ```
 
-####[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) - interface
+#### [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) - interface
 
 ```
 void clear()
@@ -251,11 +251,11 @@ V remove(Object key) //optional
 default boolean remove(Object key, Object value)
 ```
 
-####[HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
+#### [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
 
 - implement: Map<K, V>
 
-####[LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html)
+#### [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html)
 - extends: HashMap
 - implement: Map<K, V>
 - Hash table and linked list implementation of the Map interface, with predictable iteration order.
@@ -294,7 +294,7 @@ class LRUCache {
 }
 ```
 
-####[SortedMap](https://docs.oracle.com/javase/8/docs/api/java/util/SortedMap.html) - interface
+#### [SortedMap](https://docs.oracle.com/javase/8/docs/api/java/util/SortedMap.html) - interface
 - extends: Map
 
 ```
@@ -303,7 +303,7 @@ K firstKey()
 K lastKey()
 ```
 
-####[NavigableMap](https://docs.oracle.com/javase/8/docs/api/java/util/NavigableMap.html) - interface
+#### [NavigableMap](https://docs.oracle.com/javase/8/docs/api/java/util/NavigableMap.html) - interface
 - extends: Map<K,V>, SortedMap<K, V>
 
 ```
@@ -330,28 +330,28 @@ Map.Entry<K, V> pollLastEntry()
 NavigableSet<K> navigableKeySet()
 ```
 
-####[TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)
+#### [TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)
 	- implements: Map, NavigableMap, SortedMap
 	- A Red-Black tree based NavigableMap implementation
 ```
 TreeMap(Comparator<? super K> comparator)
 ```
 
-####[Set](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html) - interface
+#### [Set](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html) - interface
 
 - implement: Collection<E>, Iterable<E>
 
-####[HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
+#### [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
 - implement: Iterable<E>, Collection<E>, Set<E>
 - backed by HashMap
 
-####[LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)
+#### [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)
 - implement: Iterable<E>, Collection<E>, Set<E>
 - Hash table and linked list implementation of Set
 - maintains a doubly linked list running through all its entries.
 - Iterating order is insertion order
 
-####[SortedSet](https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html) - interface
+#### [SortedSet](https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html) - interface
 ```
 E first()
 
@@ -359,7 +359,7 @@ E last()
 
 ```
 
-####[NavigableSet](https://docs.oracle.com/javase/8/docs/api/java/util/NavigableSet.html) - interface
+#### [NavigableSet](https://docs.oracle.com/javase/8/docs/api/java/util/NavigableSet.html) - interface
 - extend: Collection<E>, Iterable<E>, Set<E>, SortedSet<E>
 
 ```
@@ -376,12 +376,12 @@ E pollFirst()
 E pollLast()
 ```
 
-####[TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html) 
+#### [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html) 
 - implement: Iterable, Collection, NavigableSet, Set, SortedSet
 - A NavigableSet implementation based on a TreeMap
 - guaranteed log(n) time cost for basic operations (add, remove and contains)
 
-####[Collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html)
+#### [Collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html)
 ```
 static <T extends Comparable<? super T>> void sort(List<T> list)
 
