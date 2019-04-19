@@ -347,9 +347,12 @@ TreeMap(Comparator<? super K> comparator)
 
 #### [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)
 - implement: Iterable<E>, Collection<E>, Set<E>
-- Hash table and linked list implementation of Set
-- maintains a doubly linked list running through all its entries.
-- Iterating order is insertion order
+
+- Hash table and linked list implementation of the Set interface, with predictable iteration order. 
+- This implementation differs from HashSet in that it maintains a doubly-linked list running through all of its entries. 
+- This linked list defines the iteration ordering, which is the order in which elements were inserted into the set (insertion-order). 
+- Note that insertion order is not affected if an element is re-inserted into the set. (An element e is reinserted into a set s if s.add(e) is invoked when s.contains(e) would return true immediately prior to the invocation.)
+
 
 #### [SortedSet](https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html) - interface
 ```
