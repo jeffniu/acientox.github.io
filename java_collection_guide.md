@@ -9,6 +9,10 @@ int[] a;
 Arrays.fill(a, 0);
 ```
 ```
+static <T> List<T> asList(T... a)
+
+static IntStream stream(int[] array)
+
 static void	sort(short[] a)
 
 static void	sort(short[] a, int fromIndex, int toIndex)
@@ -92,7 +96,7 @@ boolean containsAll(Collection<?> c)
 
 boolean isEmpty()
 
-boolean remove(Object o)
+boolean remove(Object o) // remove the first occurence of o
 
 int size()
 
@@ -116,11 +120,13 @@ E get(int index)
 
 E set(int index, E element)
 
+E remove(int index)
+
 List<E> subList(int fromIndex, int toIndex) //[inclusive, exclusive)
 
 int indexOf(Object o)
 
-void add(int index, E element)
+void add(int index, E element) // out of bound if index < 0 || index > size()
 
 boolean addAll(Collection<? extends E> c)
 
@@ -366,9 +372,9 @@ E last()
 - extend: Collection<E>, Iterable<E>, Set<E>, SortedSet<E>
 
 ```
-E ceiling(E e)
+E ceiling(E e) // return smallest element >= e
 
-E floor(E e)
+E floor(E e) // return largest element <= e
 
 E higher(E e)
 
@@ -398,3 +404,16 @@ insertPos < 0, represent insertion point is at index (-insertPos-1)
 static <T> int binarySearch(List<? extends T> list, T key, Comparator<? super T> c)
 ```
 
+#### [BitSet](https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html)
+```
+BitSet()
+BitSet(int nbits)
+
+void set(int bitIndex)
+boolean get(int bitIndex)
+
+void and(BitSet set)
+void or(BitSet set)
+void xor(BitSet set)
+void andNot(BitSet set)
+```
