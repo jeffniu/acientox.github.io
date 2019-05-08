@@ -250,6 +250,8 @@ V put(K key, V value) //return previous associated value (can be null)
 
 default V putIfAbsent(K key, V value)
 
+default V computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction)
+
 default V getOrDefault(Object key, V defaultValue)
 
 V remove(Object key) //optional
